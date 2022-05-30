@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "iranyekan";
+    src: url("/libs/Fonts/IranYekan/iranyekanwebmedium.eot");
+    src: url("/libs/Fonts/IranYekan/iranyekanwebmedium.woff") format("woff");
+    src: url("/libs/Fonts/IranYekan/iranyekanwebblack.eot");
+    src: url("/libs/Fonts/IranYekan/iranyekanwebblack.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundbody: #ffffff;
+    --accordion-background: #10ac84;
+    --accordion-background-collapsed: #079992;
+    --faq-header-text: #ffffff;
+    --answer-faq-text: #626262;
+}
+
+body {
+    background-color: var(--backgroundbody);
+    font-family: 'iranyekan', tahoma, Arial;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    padding: 2rem;
+}
+
+.accordion-button {
+    background: var(--accordion-background);
+    color: var(--faq-header-text);
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--accordion-background-collapsed);
+    color: var(--faq-header-text);
+}
+
+.accordion-button:focus {
+    border-color: unset;
+    box-shadow: unset;
+}
+
+.accordion-button::after {
+    background-image: url(/img/arrow.svg);
+    transform: rotate3d(-19, 0, 79, 90deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(/img/arrow.svg);
+}
+
+.accordion-body {
+    color: var(--answer-faq-text);
+}
+
+.AskBtn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+h5 {
+    font-size: inherit;
+    color: #085642;
+}
+
+.form-label {
+    margin: 0.5rem;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 679px;
+        margin: 1.75rem auto;
+    }
+}
